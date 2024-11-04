@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up Modal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sign-In Button at the Top Right Corner -->
+  <button id="signin-btn" onclick="openModal()">Sign In</button>
+
+
+<!-- Trigger Button (Optional) -->
+<!-- <button onclick="openModal()">Open Modal</button> -->
+
+<div class="overlay" id="overlay">
+    <div class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <h2>Please Login To Continue</h2>
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'signIn')">Sign In</button>
+            <button class="tab-button" onclick="openTab(event, 'signUp')">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signIn" class="tab-content active">
+            <form>
+                <input type="text" placeholder="Username or Email" required>
+                <input type="password" placeholder="Password" required>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+            <p>or</p>
+            <div class="social-buttons">
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+                <button class="linkedin">LinkedIn</button>
+                <button class="github">GitHub</button>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signUp" class="tab-content">
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}">
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <div class="upload-container">
+                    <label for="profilePic" class="upload-label">Upload Profile Picture</label>
+                    <input type="file" id="profilePic" accept="image/*">
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <p>or</p>
+            <div class="social-buttons">
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+                <button class="linkedin">LinkedIn</button>
+                <button class="github">GitHub</button>
+            </div>
+        </div>
+
+        <p class="footer-text">
+            Why Create an Account?<br>
+            By creating this account, you agree to our <a href="#">Privacy Policy</a> & <a href="#">Cookie Policy</a>.
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
